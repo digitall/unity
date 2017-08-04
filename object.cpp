@@ -1226,6 +1226,10 @@ ResultType ConditionBlock::check(UnityEngine *_vm, Action *context) {
 		}
 
 		debugN("\n");
+
+		if (!did_something) {
+			warning("empty ConditionBlock::check i:%u: (%s)?", i, obj->identify().c_str());
+		}
 	}
 
 	// TODO: stupid hardcoded tricorder sound
